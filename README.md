@@ -12,7 +12,7 @@ To develop baseline model for each node which has mode = 6 (There are 70 nodes o
  ## **Performing Transfer learning using Baseline model of each Node**
 After training RNN for each node and obtaining baseline model for each node, we perform TL in order to obtain test MSE and number of epochs. Out of 70 nodes, we will keep/assume the first node as the baseline model and perform TL by transferring the baseline model to the remaining 69 nodes and train the RNN and save test MSE and number of epochs. In the same fashion, we keep/assume the second node as the baseline model and perform TL by transferring this baseline model to the remaining 69 nodes and train the RNN and save test MSE and number of epochs. This process continues until the last 70th node becomes the baseline model and transferred to the remaining 69 nodes to train RNN and save test MSE and number of epochs. This results in 4761 (69 nodes x 69 model transferred) combinations. 
 
-In each scenario of TL, the RNN is trained with different splits of training and testing data, for example, 60:40, 65:35, 70:30, 75:25, 80:20, 85:15, 90:10. With each split of data, we optimise the MSE and store the test MSE corresponding to TL and number of training epochs to use it further for the similarity between two nodes.
+In each scenario of TL, the RNN is trained with different splits of training and testing data. With each split of data, we optimise the MSE and store the test MSE corresponding to TL and number of training epochs to use it further for the similarity between two nodes.
 
 # **Requirements:**
 * Time-Series Data Modelling 
